@@ -1,0 +1,13 @@
+<%- layout("./boilerplate.ejs") %>
+<form action='/edit/<%=data._id%>' method='post'>
+		<div class='container-main'>
+			<h1>#Update</h1>
+			<label for='user'>username</label>
+			<input type='text' name='username' id='user' value=<%=data.username%> >
+
+			<label for='cap'>caption</label>
+			<input type='text' name='caption' id='cap' value=<%=data.caption%> >
+
+			<button id='green'>Add</button>
+		</div>
+	</form>

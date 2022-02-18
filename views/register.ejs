@@ -1,0 +1,17 @@
+<%- layout("./boilerplate.ejs") %>
+	<form action='/register' method='post' enctype='multipart/form-data'>
+		<div class='container-main'>
+			<h1>#Art</h1>
+			<label for='user'>username</label>
+			<input type='text' name='username' id='user'>
+
+			<label for='pass'>password</label>
+			<input type='password' name='password' id='pass'>
+
+			<label for='cap'>caption</label>
+			<input type='text' name='caption' id='cap'>
+
+			<input type='file' name='photo' id='img' multiple>
+			<button id='green'>Add</button>
+		</div>
+	</form>

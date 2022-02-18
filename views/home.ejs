@@ -1,0 +1,21 @@
+<%- layout("./boilerplate.ejs") %>
+	<link rel="stylesheet" type="text/css" href="/css/home.css">
+		<%for(let user of data){%>
+			<div class='container'>
+				<div id='content'>
+					<h2> <%=user.caption%> </h2>
+					<h3>By: <%=user.username%></h3>
+					<form action='/edit/<%=user._id%>'>
+						<button id='green'>Edit</button>
+					</form>
+				</div>
+				<%for(let img of user.photo){%>
+					<section id='pic'>
+						<img src=<%=img[0]%>>
+						<form action='/delete/<%=user._id%>/<%=img[1]%>?_method=DELETE' method='post'>
+							<button>Delete</button>
+						</form>
+					</section>
+				<%}%>
+			</div>
+		<%}%>
